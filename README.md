@@ -240,3 +240,11 @@ let commands = {
   // ...
 }
 ```
+
+## Further Reading
+
+Be sure to check out the [Discord.js Documentation](https://discord.js.org/#/docs)! They have everything you can do with your discord bot all nicely documented. Need to create a text channel? Kick a user? Anything? Their docs show you how you would do it!
+
+[Discord.js Documentation](https://discord.js.org/#/docs) is your google for JavaScript discord bots.
+
+There's also [Discord's own documentation](https://discord.dev) which should answer any questions you have!
