@@ -42,7 +42,7 @@ You need administrative privileges to add a discord bot to a server.
 
 If you do not already have the admin role in a server, below are the instructions to create a discord server.
 <details>
-<summary>Creating a Server</summary>
+<summary>Instructions to Create a Discord Server</summary>
 
 Now that you are able to make a bot, you need to make a place for it to live. To get started, open up Discord and follow these steps:
 
