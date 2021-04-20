@@ -150,3 +150,93 @@ Now type `ping` in one of the text channels on your server.
 <img src="media/xmIHN9NC3C.gif">
 
 There's so much other things you can do with Discord bots! Check out the [Discord.js Documentation](https://discord.js.org/#/docs) for detailed specifications on everything you can do!
+
+## Command System
+
+Here's a pretty simple command system for your bot. Feel free to copy paste!
+
+```js
+// index.js
+// Command System
+let commands = {
+
+};
+let prefix = '/';
+client.on('message', msg => {
+  if (msg.content.substr(0, prefix.length) == prefix) {
+    let cmd = msg.content.substr(prefix.length).split(' ')[0]; // get first word in our command
+    if (cmd == 'help') { // Show our commands.
+      msg.reply(
+        'Commands:\r\n' + Object.entries(commands)
+        .filter(([key, value]) => typeof value != 'string') // Filter out Alias's
+        .map(([key, value]) => `${prefix}${value.syntax || key}: ${value.info}`) // Convert our commands to string format
+        .join('\r\n') // Join by newline
+    );
+    } else {
+      if (cmd in commands) {
+        let command = commands[cmd];
+        if (typeof command == 'string') { // Alias support
+          commands[command].run(msg);
+        } else {
+          command.run(msg);
+        }
+      } else {
+        msg.reply("Sorry, I don't know what command you're referring to! Say `" + prefix + "help` for more info.")
+      }
+    }
+  }
+})
+```
+
+### Magic 8-Ball
+
+```js
+// index.js
+let commands = {
+  // ...
+  '8ball': {
+    info: "Ask the Magic 8-ball for a response.", // For help command
+    run(msg) {
+      let responses = [
+        'Yes',
+        'No',
+        'Maybe',
+        'Perhaps',
+        "That's up to you",
+        "Ask again later",
+        "For Certain",
+        "Unlikely",
+        // add more if you want
+      ];
+      let chosen = responses[Math.floor(Math.random() * responses.length)];
+      msg.reply(chosen);
+    },
+  }
+  '8-ball': '8ball', // Alias
+  // ...
+}
+```
+
+### Random Number Generator
+
+```js
+// index.js
+let commands = {
+  // ...
+  'random': {
+    syntax: 'random [number]',
+    info: 'Generate a random number between 1 and 10, or 1 and a chosen integer.',
+    run(msg) {
+      let min = 1;
+      let max = 10;
+      let args = msg.content.trim().split(' ');
+      args.shift(); // pop off first argument
+      if (args.length >= 1) {
+        max = Number(args[0]) || max;
+      }
+      msg.reply(Math.floor((Math.random() * max) + min));
+    }
+  }
+  // ...
+}
+```
