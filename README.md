@@ -151,6 +151,16 @@ Now type `ping` in one of the text channels on your server.
 
 There's so much other things you can do with Discord bots! Check out the [Discord.js Documentation](https://discord.js.org/#/docs) for detailed specifications on everything you can do!
 
+## Sending a message in a named channel
+
+```js
+// index.js
+client.on('ready', () => {
+  // This code needs to run after our bot is officially online and connected to discord
+  client.channels.cache.find(channel => channel.name == 'lesson_chat').send('hi there!')
+})
+```
+
 ## Command System
 
 Here's a pretty simple command system for your bot. Feel free to copy paste!
