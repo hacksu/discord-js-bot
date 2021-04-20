@@ -106,6 +106,8 @@ Now that you have your bot's token on your keyboard, we can put that in our prog
 ```js
 // index.js
 client.login('PASTE_YOUR_TOKEN_HERE');
+// BE CAREFUL! If someone gets this token then they can login as your bot!
+// Keep it secret! Keep it safe!
 ```
 
 Eyy, out bot can login now! But we still need to add it to a server in order to properly use it.
@@ -146,3 +148,5 @@ Stop your bot with `Ctrl+C`, then start it up again with `node index.js`!
 Now type `ping` in one of the text channels on your server.
 
 <img src="media/xmIHN9NC3C.gif">
+
+There's so much other things you can do with Discord bots! Check out the [Discord.js Documentation](https://discord.js.org/#/docs) for detailed specifications on everything you can do!
