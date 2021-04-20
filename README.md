@@ -30,6 +30,28 @@ Now that we've set up our project, we can start installing stuff!
 
 [NPM](https://www.npmjs.com/) is a package repository that allows us to install a variety of open source modules for our projects. We're going to start by installing [Discord.js](https://www.npmjs.com/package/discord.js), which we can do by running
 ```
-npm install express --save
+npm install discord.js --save
 ```
 (The --save flag adds this module to our package.json, which has a definition of the modules we install. This is very useful for giving your project to your friend or just remembering what you installed)
+
+<details>
+<summary>## Creating a Server</summary>
+
+Now that you are able to make a bot, you need to make a place for it to live. To get started, open up Discord and follow these steps:
+
+1: Select the plus button at the bottom of your server list.
+
+![add a server](https://i.imgur.com/xpYb4bU.png)
+
+2: Select the "Create My Own" button.
+
+![create my own](https://i.imgur.com/0j2pswe.png)
+
+3: Name the server whatever you want, and then click "Create"
+
+![name server](https://i.imgur.com/OdIlEhC.png)
+
+You should now see a blank server in your server list!
+
+![blank server](https://i.imgur.com/YBfzuF5.png)
+</details>
