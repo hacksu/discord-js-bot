@@ -107,3 +107,42 @@ Now that you have your bot's token on your keyboard, we can put that in our prog
 // index.js
 client.login('PASTE_YOUR_TOKEN_HERE');
 ```
+
+Eyy, out bot can login now! But we still need to add it to a server in order to properly use it.
+
+## Adding your bot to a Discord Server
+
+Go back to your [discord developer portal](https://discord.com/developers/applications), click on your bot, and go to the OAuth tab.
+
+Scroll down to "OAuth2 URL Generator" and check the `bot` checkbox. After that, scroll down and check `Administrator`.
+
+Once you've done that, copy the link it generated for you and open it up in a new tab.
+
+From there, select the server dropdown and pick the discord server you want to add it to, then click Continue, then Authorize.
+
+## Booting up your Bot
+
+Now that your bot is in a server, we can make sure it works by starting our program up.
+
+```bash
+node index.js
+```
+
+You should see "Logged in as BOT_NAME#0000" and your bot should be set to "Online" on your server's member list!
+
+## Receiving Messages
+
+```js
+// index.js
+client.on('message', msg => {
+  if (msg.content == 'ping') {
+    msg.reply('Pong!');
+  }
+})
+```
+
+Stop your bot with `Ctrl+C`, then start it up again with `node index.js`!
+
+Now type `ping` in one of the text channels on your server.
+
+<img src="media/xmIHN9NC3C.gif">
