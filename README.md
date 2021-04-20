@@ -28,13 +28,13 @@ Now that we've set up our project, we can start installing stuff!
 
 ### Installing Modules
 
-[NPM](https://www.npmjs.com/) is a package repository that allows us to install a variety of open source modules for our projects. We're going to start by installing [Discord.js](https://www.npmjs.com/package/discord.js), which we can do by running
+[NPM](https://www.npmjs.com/) is a package repository that allows us to install a variety of open source modules for our projects. We're going to start by installing [Discord.js](https://discord.js.org/), which we can do by running
 ```
 npm install discord.js --save
 ```
 (The --save flag adds this module to our package.json, which has a definition of the modules we install. This is very useful for giving your project to your friend or just remembering what you installed)
 
-## Creating a Discord Server
+## Discord Servers
 
 In order to use your discord bot, it needs to be added to a discord server.
 
@@ -62,3 +62,48 @@ You should now see a blank server in your server list!
 
 ![blank server](https://i.imgur.com/YBfzuF5.png)
 </details>
+
+## Registering your Discord Bot
+
+In order to make a discord bot, you need to create an application on the [discord developer portal](https://discord.com/developers/applications).
+
+Head [here](https://discord.com/developers/applications) and click on "New Application".
+
+Once you've done that, head to the "Bot" tab and click "Add Bot", then click "Yes, do it!"
+
+Now you have a bot! You should see a "Copy" button somewhere in the center of the screen. Don't click it yet, but remember where it is because we'll need to access it later.
+
+## Coding our Discord Bot
+
+Now that we've registered our discord bot, its time to build it!
+
+To start, we need a `.js` file so we can write some code. Create a file called `index.js` in your project folder. (It can be whatever name you want, but 'index' is recommended because its the root of your project)
+```
+# Windows:
+echo > index.js
+# Max & Linux:
+touch index.js
+```
+
+Now we need to require discord.js so we can use it to build our bot.
+
+index.js
+```js
+let Discord = require('discord.js');
+let client = new Discord.Client();
+
+client.on('ready', () => {
+  console.log('Logged in as ' + client.user.tag);
+});
+```
+
+But hold on... how do we get our bot to login? Well, remember when I said to remember where that "Copy" button was? Lets go back there.
+
+In order for our bot to login, we need to use it's secret token so it can authenticate itself. Go ahead and click the copy button.
+
+Now that you have your bot's token on your keyboard, we can put that in our program so it can login!
+
+index.js
+```js
+client.login('PASTE_YOUR_TOKEN_HERE');
+```
