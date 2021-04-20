@@ -34,8 +34,15 @@ npm install discord.js --save
 ```
 (The --save flag adds this module to our package.json, which has a definition of the modules we install. This is very useful for giving your project to your friend or just remembering what you installed)
 
+## Creating a Discord Server
+
+In order to use your discord bot, it needs to be added to a discord server.
+
+You need administrative privileges to add a discord bot to a server.
+
+If you do not already have the admin role in a server, below are the instructions to create a discord server.
 <details>
-<summary>## Creating a Server</summary>
+<summary>Creating a Server</summary>
 
 Now that you are able to make a bot, you need to make a place for it to live. To get started, open up Discord and follow these steps:
 
