@@ -46,15 +46,15 @@ If you do not already have the admin role in a server, below are the instruction
 
 Now that you are able to make a bot, you need to make a place for it to live. To get started, open up Discord and follow these steps:
 
-1: Select the plus button at the bottom of your server list.
+1. Select the plus button at the bottom of your server list.
 
 ![add a server](https://i.imgur.com/xpYb4bU.png)
 
-2: Select the "Create My Own" button.
+2. Select the "Create My Own" button.
 
 ![create my own](https://i.imgur.com/0j2pswe.png)
 
-3: Name the server whatever you want, and then click "Create"
+3. Name the server whatever you want, and then click "Create"
 
 ![name server](https://i.imgur.com/OdIlEhC.png)
 
