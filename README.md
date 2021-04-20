@@ -87,8 +87,8 @@ touch index.js
 
 Now we need to require discord.js so we can use it to build our bot.
 
-index.js
 ```js
+// index.js
 let Discord = require('discord.js');
 let client = new Discord.Client();
 
@@ -103,7 +103,7 @@ In order for our bot to login, we need to use it's secret token so it can authen
 
 Now that you have your bot's token on your keyboard, we can put that in our program so it can login!
 
-index.js
 ```js
+// index.js
 client.login('PASTE_YOUR_TOKEN_HERE');
 ```
