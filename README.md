@@ -17,7 +17,7 @@ You can check to make sure everything is installed properly by opening a termina
 ### Setting up our project
 
 Lets get started by going in to a directory that we want to do create our project. Open a terminal where you want your project to be.
-```
+```bash
 mkdir my-discord-bot
 cd my-discord-bot
 ```
@@ -29,7 +29,7 @@ Now that we've set up our project, we can start installing stuff!
 ### Installing Modules
 
 [NPM](https://www.npmjs.com/) is a package repository that allows us to install a variety of open source modules for our projects. We're going to start by installing [Discord.js](https://discord.js.org/), which we can do by running
-```
+```bash
 npm install discord.js --save
 ```
 (The --save flag adds this module to our package.json, which has a definition of the modules we install. This is very useful for giving your project to your friend or just remembering what you installed)
@@ -78,7 +78,7 @@ Now you have a bot! You should see a "Copy" button somewhere in the center of th
 Now that we've registered our discord bot, its time to build it!
 
 To start, we need a `.js` file so we can write some code. Create a file called `index.js` in your project folder. (It can be whatever name you want, but 'index' is recommended because its the root of your project)
-```
+```bash
 # Windows:
 echo > index.js
 # Max & Linux:
